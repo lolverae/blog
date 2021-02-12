@@ -19,11 +19,11 @@
       display: inline-block;
       text-align: center;
       line-height: 100px;
-      border: 5px solid #e8e9a1;
+      border: 5px solid #a3ddcb;
       box-sizing: border-box;
       &:hover,
       &:focus {
-        background: #e6b566;
+        background: #a3ddcb;
       }
       &:hover + .logo-prompt,
       &:focus + .logo-prompt {
