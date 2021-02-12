@@ -1,43 +1,35 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
 import "../styles/global.scss"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          avatar
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+            avatar
+          }
         }
       }
-    }
-  `)
-
-  return (
-    <>
-    <main>
-    <Header avatar={data.site.siteMetadata.avatar} />
-      <div
-        style={{
-          margin:`3rem auto`,
-          maxWidth: 650,
-          padding: `0 1rem`,
-        }}
-      >
-        <main>{children}</main>
+    `}
+    render={data => (
+      <>
+      <div className="flexThisBox">
+        <Header avatar={data.site.siteMetadata.avatar} />
+        <div id="content">{children}</div>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </div>
 
-    </main>
-
-    </>
-  )
-}
+      </>
+    )}
+  />
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

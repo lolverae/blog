@@ -2,21 +2,63 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import { groupBy, getDateYear } from "../utils/date"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  // all posts without dates are assumed to be drafts or pages
+  // not to be added to postsList
+  const posts = data.allMarkdownRemark.edges.filter(
+    p => p.node.frontmatter.date !== null
+  )
+  const postsList = posts =>
+    posts.map(post => (
+      <li key={post.node.id}>
+        <div className="post-date code">
+          <small>{post.node.frontmatter.date}</small>
+        </div>
+        <div className="title">
+          <Link to={post.node.fields.slug}>{post.node.frontmatter.title}</Link>
+        </div>
+      </li>
+    ))
+
+  const postsListContainer = groupBy(posts, getDateYear)
+    .map(({ year, posts }, i) => (
+      <div key={i}>
+        <h4 className="code">{year}</h4>
+        {postsList(posts)}
+      </div>
+    ))
+    .reverse()
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div className="divider" />
+      <section>
+        <ul>{postsListContainer}</ul>
+      </section>
+    </Layout>
+  )
+}
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "DD MMMM YY")
+            title
+          }
+        }
+      }
+    }
+  }
+`
