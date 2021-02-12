@@ -1,30 +1,32 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { Location } from "@reach/router"
+
 import "../styles/header.scss"
 
 const Header = ({ avatar }) => (
   <header className="logo">
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+    <Location>
+      {({ location }) => {
+        return location.pathname === "/" ? (
+          <div>
+            <Link to="/about/">
+              <img src={avatar} className="logo-avatar" alt="mi logo"/>
+            </Link>
+            <span className="logo-prompt code">Sobre mi </span>
+          </div>
+        ) : (
+          <div>
+            <Link to="/">
+              <img src={avatar} className="logo-avatar" alt="mi logo"/>
+            </Link>
+            <span className="logo-prompt code">Llevame a casa</span>
+          </div>
+        )
       }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          <img src={avatar} className= "logo-avatar" alt="huevolas" />
-        </Link>
-        <span className="logo-prompt code">Sobre mi 🦧</span>
-      </h1>
-    </div>
+    </Location>
+
   </header>
 )
 
