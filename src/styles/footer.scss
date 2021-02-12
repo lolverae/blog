@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+  margin-top: 10vh;
+  background-color: #a3ddcb;
+  color: #777;
+  a {
+    border: none;
+    font-weight: bold;
+  }
+  .icons{
+    fill: #e5707e;
+    margin: 1rem;
+    
+  }
+  .icons:hover {
+    fill: #e8e9a1; 
+  }
+}

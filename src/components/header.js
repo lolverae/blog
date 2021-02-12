@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import "../styles/header.scss"
 
 const Header = ({ avatar }) => (
   <header
