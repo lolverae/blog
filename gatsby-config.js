@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog de Alberto`,
-    description: `Este es mi blog personal y mi mochila de viaje en un largo viaje de aprendizaje.`,
+    title: `Alberto`,
+    description: `Mi blog personal`,
     author: `@lolverae`,
+    avatar: `https://avatars.githubusercontent.com/u/40847744?s=400&u=091a0fb37e7ca47253acb1a5b3a56a376b1e15f8&v=4`,
+    siteUrl: `https://www.lolverae.codes`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
