@@ -20,7 +20,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-      <div className="flexThisBox">
+      <div>
         <Header avatar={data.site.siteMetadata.avatar} />
         <div id="content">{children}</div>
         <Footer siteTitle={data.site.siteMetadata.title} />
