@@ -46,7 +46,7 @@
       position: absolute;
       display: none;
       vertical-align: middle;
-      padding: 5%;
+      padding: 3%;
       border-radius: 5%;
       background: #e5707e;
       background: #e5707e;
@@ -55,9 +55,9 @@
       font-size: 1rem;
       font-family: monospace;
       text-align: center;
-      line-height: 1.2;
+      line-height:.1;
       top: 50%;
-      margin-top: -10px;
+      margin-top: -50px;
       &:before {
         content: "";
         border-width: 10px 10px 10px 0;
