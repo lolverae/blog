@@ -4,12 +4,7 @@ import React from "react"
 import "../styles/header.scss"
 
 const Header = ({ avatar }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header className="logo">
     <div
       style={{
         margin: `0 auto`,
@@ -25,8 +20,9 @@ const Header = ({ avatar }) => (
             textDecoration: `none`,
           }}
         >
-          <img src={avatar} alt="huevolas" />
+          <img src={avatar} className= "logo-avatar" alt="huevolas" />
         </Link>
+        <span className="logo-prompt code">Sobre mi 🦧</span>
       </h1>
     </div>
   </header>
