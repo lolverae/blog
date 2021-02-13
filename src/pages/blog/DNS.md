@@ -3,6 +3,8 @@ title: DNS | Google's Course on Coursera
 date: 2020-06-15
 ---
 
+El día de ayer, como parte nuestro programa #InnovaccionVirtual en su ciclo especializado, tuve la oportunidad de impartir la 1er sesión de #AzureThursdays donde a través de #MicrosoftTeams platiqué con más de 1,000 estudiantes de carreras especializadas en tecnología, compartiendo conocimientos y motivándolos en su camino para obtener la certificación AZ-900. ¡Que emocionante experiencia! Gracias por todo el trabajo a cada uno de nuestros #SherpasDigitales y en especial a Juan Oscar!!!
+#
 # Domain Name Resolution
 There are five primary types of DNS servers; caching name servers, recursive name servers, root name servers, TLD name servers, and authoritative name servers.
 	Caching---->Generally provided by an ISP or your local network, store domain names lookups for a certain ISP or local network. Used to 		prevent waste of time by looking up an IP whenever connection is established.

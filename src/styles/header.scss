@@ -19,11 +19,11 @@
       display: inline-block;
       text-align: center;
       line-height: 100px;
-      border: 5px solid #a3ddcb;
+      border: 5px solid #70af85;
       box-sizing: border-box;
       &:hover,
       &:focus {
-        background: #a3ddcb;
+        background: #70af85;
       }
       &:hover + .logo-prompt,
       &:focus + .logo-prompt {
@@ -48,12 +48,10 @@
       vertical-align: middle;
       padding: 3%;
       border-radius: 5%;
-      background: #e5707e;
-      background: #e5707e;
+      background: #aa8976;
       margin-left: 10px;
       color: #fff;
       font-size: 1rem;
-      font-family: monospace;
       text-align: center;
       line-height:.1;
       top: 50%;
@@ -62,8 +60,7 @@
         content: "";
         border-width: 10px 10px 10px 0;
         border-style: solid;
-        border-color: transparent #e5707e;
-        border-color: transparent #e5707e;
+        border-color: transparent #aa8976;
         position: absolute;
         top: 50%;
         left: -5px;
