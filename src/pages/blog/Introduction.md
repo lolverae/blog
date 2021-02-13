@@ -2,13 +2,8 @@
 title: Rumbo al AI-900 [En inglés]
 date: 2020-09-07
 ---
-
-- [Introduction to AI](#introduction-to-ai)
-  - [Setting up the labs](#setting-up-the-labs)
-  - [The dataset](#the-dataset)
-  - [Experiments](#experiments)
-    - [Finished experiment](#finished-experiment)
-  - [Deploying the model](#deploying-the-model)
+```toc
+```
 # Introduction to AI
 
 When I think of artificial intelligence the first thing that comes to mind is, predictions. One of basic things that you learn when to start reading about machine learning is that you can take a bunch of data about something, meaning inputs to a function and then predicting the expected output based on previous inputs. In math we define the function as 

@@ -2,7 +2,8 @@
 title: Introduction to microservices | Google's Course on Coursera
 date: 2020-06-13
 ---
-
+```toc
+```
 # Microservices
 
 Monilithic apps have all their features in a single code base and a single data base.

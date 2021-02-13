@@ -3,7 +3,8 @@ title: Disaster planning | Google's Course on Coursera
 date: 2020-07-08
 ---
 
-
+```toc
+```
 # Disaster planning
 
 For high availability we need to multiple zones in a region, that can be achieved by deploying to multiple servers that need to be orchestrated with a instance group, thet we create a failover database (replica DB) in another zone or use a distributed database

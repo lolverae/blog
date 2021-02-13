@@ -4,6 +4,9 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+
+import "../styles/posts.scss"
+
 const PostTemplate = ({ data, pageContext }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark

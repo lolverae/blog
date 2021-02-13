@@ -2,7 +2,8 @@
 title: Introduction to Puppet | Google's IT Automation Course on Coursera
 date: 2020-08-27
 ---
-
+```toc
+```
 
 # Puppet
 ## Introduction
